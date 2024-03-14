@@ -8,6 +8,19 @@
 
 int _printf(const char *format, ...)
 {
-    (void) *format;
-    return (0);
+    int i;
+    
+
+
+    If existe % 
+    {
+        if i++ es s
+        {
+
+        }
+        if i++ es c
+        {
+
+        }
+    }
 }

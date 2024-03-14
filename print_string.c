@@ -9,7 +9,7 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-    va_list strings;
+    va_list arg;
     const char *str;
     unsigned int i;
 
@@ -20,11 +20,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
         separator_len = strlen(separator);
     }
 
-    va_start(strings, n);
+    va_start(arg, n);
 
     for (i = 0; i < n; i++)
     {
-        str = va_arg(strings, const char *);
+        str = va_arg(arg, const char *);
 
         if (str == NULL)
                 write(STDOUT_FILENO, "(nil)", 5); /**para imprimir nil*/
@@ -38,5 +38,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
     write(STDOUT_FILENO, "\n", 1); /**salto de línea*/
 
-    va_end(strings);
+    va_end(arg);
 }

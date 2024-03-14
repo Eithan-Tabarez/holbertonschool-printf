@@ -7,7 +7,7 @@
 * Return: Always 0.
 */
 
-int print_percent(va_list pct)
+int print_percent(va_list arg)
 {
     (void)pct;
 
