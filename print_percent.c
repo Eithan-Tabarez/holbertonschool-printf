@@ -2,8 +2,9 @@
 
 /**
 * print_percent - Print a percent symbol.
-* @a: .
+* @pct: percent symbol.
 * 
+* Return: Always 0.
 */
 
 int print_percent(va_list pct)

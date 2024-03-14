@@ -6,9 +6,9 @@
 #include <unistd.h>
 
 void print_strings(const char *separator, const unsigned int n, ...);
-/**
-*int _printf(const char *format, ...);
-*/
+int print_percent(va_list pct);
+int _printf(const char *format, ...);
+
 
 
 
