@@ -9,25 +9,26 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
     va_list strings;
-    char *str;
+    const char *str;
     unsigned int i;
 
     va_start(strings, n);
 
     for (i = 0; i < n; i++)
     {
-        str = va_arg(strings, char *);
+        str = va_arg(strings, const char *);
 
         if (str == NULL)
-            _putchar("(nil)");
+                write(STDOUT_FILENO, "(nil)", 5); /**para imprimir nil*/
+
         else
-            _putchar("%s", str);
+                write(STDOUT_FILENO, str, strlen(str)); /**para escribir la cadena**/
 
         if (i != (n - 1) && separator != NULL)
-            _putchar("%s", separator);
+                write(STDOUT_FILENO, separator, separator_len); /**usando el separador si no es el ultimo elementos*/
     }
 
-    _putchar("\n");
+    write(STDOUT_FILENO, "\n", 1); /**salto de línea*/
 
     va_end(strings);
 }
