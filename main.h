@@ -6,7 +6,7 @@
 
 
 int _printf(const char *format, ...);
-void print_strings(const char *separator, const unsigned int n, ...);
+float print_strings(const char *separator, const unsigned int n, ...);
 
 
 
