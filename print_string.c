@@ -2,6 +2,7 @@
 
 /**
 * print_string - Print a string.
+* 
 *
 */
 
@@ -18,15 +19,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
         str = va_arg(strings, char *);
 
         if (str == NULL)
-            printf("(nil)");
+            _putchar("(nil)");
         else
-            printf("%s", str);
+            _putchar("%s", str);
 
         if (i != (n - 1) && separator != NULL)
-            printf("%s", separator);
+            _putchar("%s", separator);
     }
 
-    printf("\n");
+    _putchar("\n");
 
     va_end(strings);
 }
