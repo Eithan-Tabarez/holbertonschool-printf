@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 
 void print_strings(const char *separator, const unsigned int n, ...);
 /**
