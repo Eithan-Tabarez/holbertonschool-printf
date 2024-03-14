@@ -11,7 +11,7 @@ int print_percent(va_list pct)
 {
     (void)pct;
 
-    _putchar ('%');
+    _putchar('%');
 
     return (0);
 }
