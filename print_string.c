@@ -5,7 +5,7 @@
 *
 */
 
-float print_strings(const char *separator, const unsigned int n, ...)
+int print_strings(const char *separator, const unsigned int n, ...)
 {
     va_list strings;
     char *str;
@@ -18,10 +18,7 @@ float print_strings(const char *separator, const unsigned int n, ...)
         str = va_arg(strings, char *);
 
         if (str == NULL)
-         {
             return (0);
-            str++;
-         }
         else
             printf("%s", str);
 
@@ -33,5 +30,5 @@ float print_strings(const char *separator, const unsigned int n, ...)
 
     va_end(strings);
 
-    return (0);
+    return (void);
 }

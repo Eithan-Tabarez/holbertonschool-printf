@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-float print_strings(const char *separator, const unsigned int n, ...);
+int print_strings(const char *separator, const unsigned int n, ...);
 int _printf(const char *format, ...);
 
 
