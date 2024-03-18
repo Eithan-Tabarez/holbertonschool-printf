@@ -7,31 +7,21 @@
 */
 
 int _printf(const char *format, ...)
-{
-    int i = 0;
-    /**
-     * como recibimos los datos del usuario
-     *i = input();
-     */
-    
-    if (i != '\0' && i = "%%") /** como se pone el %, si tiene que ser antes*/
-    {
-        i++;
+{    
+    va_list *ap;
+    int i;
 
-        switch(i)
-        {
-            case('c'):
-            {
-                print_char
-            }
-            break;
-            case('s'):
-            {
-                print_strings
-            }
-            break;
-        }
-        i++;
-        write(STDOUT_FILENO,'\n', 2);
+    va_start(ap, format)
+    i= 0;
+    while (*format != '\0')
+    {
+        if (*format == '%')
+            i += print_format(*(++format),ap);
+        else
+            i += write (1,format,1);
+            format++;
     }
+    va_end(ap)
+    return(i);
+    
 }
