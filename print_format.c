@@ -14,8 +14,8 @@ int print_format(char specifier, va_list ap)
     if (specifier == 'c')
         count += print_char(va_arg(ap, int));
     else if (specifier == 's')
-        count += print_string(va_arg(ap, char *));
+        count += print_strings(va_arg(ap, char *));
     else
-        count += write(1,&specifier 1);
+        count += write(1,&specifier, 1);
     return (count);
 }

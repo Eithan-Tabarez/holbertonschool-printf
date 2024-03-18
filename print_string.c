@@ -7,36 +7,16 @@
 *
 */
 
-void print_strings(const char *separator, const unsigned int n, ...)
+int print_strings(char *c)
 {
-    va_list arg;
-    const char *str;
-    unsigned int i;
+	int count = 0;
 
-    size_t separator_len = 0;
-
-    if (separator != NULL)
-    {
-        separator_len = strlen(separator);
-    }
-
-    va_start(arg, n);
-
-    for (i = 0; i < n; i++)
-    {
-        str = va_arg(arg, const char *);
-
-        if (str == NULL)
-                write(STDOUT_FILENO, "(nil)", 5); /**para imprimir nil*/
-
-        else
-                write(STDOUT_FILENO, str, strlen(str)); /**para escribir la cadena**/
-
-        if (i != (n - 1) && separator != NULL)
-                write(STDOUT_FILENO, separator, separator_len); /**usando el separador si no es el ultimo elementos*/
-    }
-
-    write(STDOUT_FILENO, "\n", 1); /**salto de línea*/
-
-    va_end(arg);
+	if (c)
+	{
+		for (count = 0; c[count] !='\0'; count++)
+		{
+			write(1, &c[count], 1);
+		}
+	}
+	return (count);
 }

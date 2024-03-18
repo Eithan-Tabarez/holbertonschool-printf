@@ -7,11 +7,11 @@
 * Return: Always 0.
 */
 
-int print_percent(va_list arg)
+int print_percent(va_list ap)
 {
-    (void)arg;
+	(void)ap;
 
-    write(STDOUT_FILENO,'%', 1);
+	write(1, "%", 1);
 
-    return (0);
+	return (0);
 }
